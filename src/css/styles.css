@@ -16,14 +16,22 @@
   } */
 
 body {
-    background-color: #D3F1DF;
+    background-color: #1B262C;
 }
 
-header {
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 40px;
-    height: auto;
-    width: 100%;
+    height: 100%; /* Cambia la altura a automática */
+    width: 30%;
     position: fixed;
+    background-color:  #1B262C;
+    border-right: 1px solid #0F4C75;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegúrate de que el header esté por encima de otros elementos */
 }
 
 nav {
@@ -41,14 +49,14 @@ nav {
 }
 
 .nav__email {
-    color: #5A6C57;
+    color: #BBE1FA;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 18px;
     font-family: 'Courier New', monospace;
     font-weight: bold;
     white-space: nowrap; /* Evita saltos de línea */
     overflow: hidden; /* Oculta el texto aún no visible */
-    border-right: 3px solid black; /* Simula el cursor */
+    border-right: 3px solid #F2A365; /* Simula el cursor */
     display: inline-block; /* Ajusta el ancho al contenido */
     width: 0; /* Se inicia en 0 */
     animation: typing 2s steps(22, end) forwards, blink 0.7s infinite;
@@ -57,7 +65,7 @@ nav {
 /* Animación del efecto de escritura */
 @keyframes typing {
     from { width: 0; }
-    to { width: 32.5%; }
+    to { width: 100%; } 
 }
 
 /* Animación del parpadeo del cursor */
@@ -74,7 +82,7 @@ nav {
     text-decoration: none;
     font-weight: 600;
     list-style: none;
-    color: #5A6C57;
+    color: #BBE1FA;
     display: flex;
     gap: 10px;
     padding: 5px;
@@ -84,11 +92,61 @@ nav {
 
 .menu__item:hover {
     transition: ease-in 0.2s;
-    background-color: #85A98F;
+    background-color: #0F4C75;
+    color: #BBE1FA;
 }
 
 .menu__icon {
     height: 20px;
-    mask-image: red;
 }
 
+.settings {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.settings__icon {
+    height: 30px;
+}
+
+.principal {
+    margin-left: 30%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegúrate de que ocupe toda la altura de la ventana */
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: #BBE1FA;
+    text-align: center; /* Asegúrate de que el texto esté centrado */
+}
+
+.card__presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+}
+
+.p__span {
+    color: #F2A365;
+    font-weight: 800;
+}
+
+.card__image {
+    height: 230px;
+    border: 3px solid #F2A365;
+    border-radius: 200px;
+}
